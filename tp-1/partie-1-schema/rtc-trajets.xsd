@@ -3,13 +3,25 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 <!-- Déclaration de l'élément trajets -->
+<xsd:element name="trajets" type="trajets-type">
+    <xsd:sequence>
+        <xsd:element name="metrobus" type="bus-type" />
+        <xsd:element name="lebus" type="bus-type" />
+        <xsd:element name="expressbus" type="bus-type" />
+        <xsd:element name="couche-tard" type="bus-type" />
+    </xsd:sequence>
+</xsd:element>
 
-<!-- Déclaration de l'élément metrobus -->
+<xsd:complexType name="bus-type">
+    <xsd:sequence>
+        <xsd:element name="bus-trajet" type="bus-trajet-type" />
+    </xsd:sequence>
+</xsd:complexType>
 
-<!-- Déclaration de l'élément lebus -->
-
-<!-- Déclaration de l'élément expressbus -->
-
-<!-- Déclaration de l'élément couche-tard -->
-
+<xsd:complexType name="bus-trajet-type">
+    <xsd:sequence>
+        <xsd:element name="coordonnee" type="coordonnee-type" />
+    </xsd:sequence>
+    <xsd:attribute name="no" use="required" type="xsd:unsignedByte" />
+</xsd:complexType>
 <!-- Déclaration de l'élément bus-trajet -->
