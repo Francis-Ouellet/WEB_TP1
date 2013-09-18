@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Couleur de chaque catégorie de trajets du RTC (élément "trajet") et couleur
+	 du texte donnant un bon contrastre avec cette couleur comme arrière-plan -->
+<rtc-trajets-couleurs xmlns="http://rtcquebec.ca">
+	<metrobus>
+		<trajet>8DC740</trajet>
+		<texte>000000</texte>
+	</metrobus>
+	<lebus>
+		<trajet>003888</trajet>
+		<texte>ffffff</texte>
+	</lebus>
+	<expressbus>
+		<trajet>F5731B</trajet>
+		<texte>000000</texte>
+	</expressbus>
+	<couche-tard>
+		<trajet>000000</trajet>
+		<texte>ffffff</texte>
+	</couche-tard>
+</rtc-trajets-couleurs>
