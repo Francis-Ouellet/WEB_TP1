@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:trj="http://rtcquebec.ca/trajets">
+	
+<!-- Importation du schéma pour l'adresse -->
+<xsd:import namespace="http://rtcquebec.ca/trajets" schemaLocation="rtc-trajets.xsd" />
 
 <!-- Déclaration de l'élément rtc -->
+<xsd:element name="rtc" type="rtc-type" />
 
+<!-- Déclaration du type complexe rtc-type -->
+<xsd:complexType name="rtc-type">
+	<xsd:sequence>
+		<xsd:element name="liste-bus" type="liste-bus-type" />
+		<xsd:element name="trajets" type="trj:trajets-type" maxOccurs="unbounded" />
+	</xsd:sequence>
+</complexType>
 
-<!-- Déclaration de l'élément liste-bus -->
+<!-- Déclaration du type complexe liste-bus-type -->
+<xsd:complexType name="liste-bus-type">
+	<xsd:element name="bus" type="bus-type" maxOccurs="unbounded" />
+</xsd:complexType>
 
-
-<!-- Déclaration de l'élément bus -->
+<!-- Déclaration du type complexe bus-type -->
+<xsd:complexType name="bus-type">
+	<xsd:attribute name="no" use="required" type="xsd:unsignedShort" />
+</xsd:complexType>
 
 </xsd:schema>
