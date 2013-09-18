@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Déclaration de l'élément trajets -->
+
+<!-- Déclaration de l'élément metrobus -->
+
+<!-- Déclaration de l'élément lebus -->
+
+<!-- Déclaration de l'élément expressbus -->
+
+<!-- Déclaration de l'élément couche-tard -->
+
+<!-- Déclaration de l'élément bus-trajet -->
